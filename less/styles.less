@@ -1,0 +1,91 @@
+﻿/* GERAL */
+body, html, div, span, a, ul, li, dl, dt, dd, section, header, p, form, fieldset, button, input, textarea, pre, figure, figcaption{border: none; margin: 0; padding: 0; list-style: none; position: relative; text-decoration: none; outline: none; }
+header, section, footer, aside, nav, main, article, figure, a, img, span, :after, :before { display: block; }
+h1,h2,h3,h4,h5,h6{font-weight: normal !important; margin: 0}
+html object{ display: none; }
+textarea { resize: none; }
+body{ 
+  font-size:100%;
+  *{ font-family: 'Arquitecta'; }
+}
+
+/*******************************
+            GLOBAL
+*******************************/
+
+//General Colors
+@orange: #f6861f;
+@blue:   #2196f3;
+@red:    #ff2717; 
+@gray-1: #475047;
+@gray-2: #465047; 
+
+//Fonts Weights
+.f-times{ font-family: 'Times New Roman'; }
+.f-bembo{ font-family: 'BemboStd'; }
+.f-bembo-semibold{ font-family: 'BemboSemibold'; }
+.f-weight-book{ font-family: 'ArquitectaBook'; }
+.f-weight-light{ font-family: 'ArquitectaLight'; }
+.f-weight-regular{ font-family: 'Arquitecta'; }
+.f-weight-bold{ font-family: 'ArquitectaBold'; font-weight: normal; }
+
+//Link Hover
+.lnks{
+  color: @gray-1; .transit; 
+  &.active, &:hover{ color:@orange; }  
+}
+.d-middle{ display: inline-block; vertical-align: middle; }
+.d-top{ display: inline-block; vertical-align: top; }
+.transit{ -webkit-transition: all 0.3s; -o-transition: all 0.3s; transition: all 0.3s; }
+.bsizing{ box-sizing: border-box; }
+.a-left{ float: left; margin:0 1em 0 0;   }
+.a-right{ float: right; margin:0 1em 0 1em;  }
+.a-center{ margin: 1em auto 0; }
+.a-bottom{ margin: 1em auto 0; }
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+.hide{ display:none; }
+/*******************************
+            MAIN
+*******************************/
+html, body{ height: 100%; }
+body{  
+  text-align: center; /*background:url('../images/coming/under_constrution450.png') no-repeat center center; */
+  &:before{
+    content:''; width: 0; height: 100%; .d-middle;
+  }
+}
+main{ 
+  width: 99%; margin: 0 auto; .transit; 
+  &.coming{
+     .d-middle;
+    h1{
+      width: 450px; display: inline-block;
+      img{ width: 100%; }
+    }
+    h2{
+      padding: 2em 0;
+      span{ color: #475047; font-size: 1em; }
+    }
+    section{
+      text-align: left; overflow: hidden; width: 320px; .d-middle;
+      &:before{
+        content:''; margin-left: -32px; background: #f5851f; width: 65px; height: 65px; border-radius: 72px; .d-top;
+      }
+      footer{        
+        .d-top; margin: 1.8em 1em;
+        *{ font-style: normal; font-size: .9em; color:#231f20 }
+        a:last-child{ color: #7f887a; margin-top: 1em; font-size: 1em; }
+      }
+    }
+  }
+}
+
+@import "responsive.less";
